@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Msg</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+
+            background-image: url('./imges/img.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #login-container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            border-radius: 15px;
+            border: none;
+        }
+
+        #login-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 15px;
+            border: none;
+        }
+        #login-btn:hover {
+            color: #fff;
+            background-color: rgb(195, 70, 70);
+        }
+
+        #home-container {
+            display: none;
+           
+        }
+        #audio-player{
+          margin-top: 20px;
+          max-width: 100%;
+        }
+        h2{
+            text-align: center;
+            margin: 40px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="login-container">
+    <h3>Hai Jyo Nenu siva nee Password type chey Neku telsu taligaa password....</h3>
+    <input type="password" id="password" placeholder="* * * *">
+    <button id="login-btn" onclick="checkPassword()">clik chey.</button>
+</div>
+
+<div id="home-container">
+    <img src="./imges/img3.jpg" alt="Description of the image" width="300" height="300" style="border: 1px solid black;">
+    <h4>Hai taligaa Nenu siva nee ela unnavu taligaa  Nenu Ninnu chala chala miss aatunanu raa na karama entitlo nenu siva ne neku cheppa situation ki vachenu maa, naku Asalu evaritho matladali anipiyatledu, Ye pani sarigga cheyyalekapothunnanu daily gurinche aalochanalu taligaa🥺 nenu move on  Awaleka pothunnanu maa Maniddari madhya jarigindi ela marchipovali. Manamaa  kalisi spend chesina time...ivanni asalu marchipovalo ardham kavatledu nuvu naku chala chala  gurthukostunnavu maa 
+        Eelagaa msg neku send  chestunnanu anii emi  anukoku raa tanani kodaa emi anadhu taligaa naku inka emi  cheyyalo teliyaledu maa.</h4>
+
+    <h4>mawa eroju nenu wait chetuvutanu nee call kosam 11:50 ki dakaa, pls call chey maa 11:52 ki nenu call chetanu.....</h4>
+    <!-- Add your home page content here -->
+
+    <audio controls id="audio-player">
+        <source src="./imges/missyu2_join (1).mp3" type="audio/mp3">  
+    </audio>
+    <br><br>
+    
+</div>
+
+<script>
+    function checkPassword() {
+        var password = document.getElementById("password").value;
+        var homeContainer = document.getElementById("home-container");
+        var loginContainer = document.getElementById("login-container");
+
+        if (password === "0405") {
+            // Correct password, show home page
+            loginContainer.style.display = "none";
+            homeContainer.style.display = "block";
+        } else {
+            // Incorrect password, display an alert or handle accordingly
+            alert("Oye jyo wrong password raa Inoka sare types chey raa'*Maana Birthdays*' ");
+        }
+    }
+</script>
+
+</body>
+</html>
